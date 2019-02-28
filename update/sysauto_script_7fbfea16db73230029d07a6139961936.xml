@@ -19,9 +19,9 @@ var rightNow = new GlideDateTime();
 // 24 hours from now.  Only return NeedIt Task records that do not have
 // a State field value of Closed Complete.
 var dueSoon = new GlideRecord('x_58872_needit_needit_task');
-dueSoon.addQuery('due_date','>=',rightNow);
-dueSoon.addQuery('due_date','<',gs.hoursAgo(-24));
-dueSoon.addQuery('state','!=',3);
+// dueSoon.addQuery('due_date','>=',rightNow);
+// dueSoon.addQuery('due_date','<',gs.hoursAgo(-24));
+// dueSoon.addQuery('state','!=',3);
 
 dueSoon.query();
 // Write a log message for each overdue NeedIt Task record
@@ -37,14 +37,14 @@ while(dueSoon.next()){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-02-25 17:06:52</sys_created_on>
         <sys_id>7fbfea16db73230029d07a6139961936</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Find Overdue NeedIt Tasks</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sysauto_script_7fbfea16db73230029d07a6139961936</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-02-25 19:22:49</sys_updated_on>
+        <sys_updated_on>2019-02-27 19:16:10</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>
